@@ -1,0 +1,11 @@
+.totalPrice {
+    font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+}
+
+.totalPriceNumber {
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #fa5333;
+    padding: .6em 1.1em;
+    color: white;
+}

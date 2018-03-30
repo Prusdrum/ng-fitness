@@ -1,0 +1,11 @@
+<app-container>
+  <div *ngIf="!loading">
+    <app-price-info></app-price-info>
+    <app-club-access></app-club-access>
+    <app-summary></app-summary>
+  </div>
+
+  <div *ngIf="loading">
+    <app-loader></app-loader>
+  </div>
+</app-container>

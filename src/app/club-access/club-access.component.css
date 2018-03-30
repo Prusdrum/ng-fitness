@@ -1,0 +1,38 @@
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.clubAccessBox {
+    flex: 1 1 100%;
+    max-width: 250px;
+    background-color: white;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    color: black;
+}
+
+.clubAccessBoxSelected {
+    color: white;
+    background-color: #0d2134;
+}
+
+.clubAccessBoxContent {
+    padding: 17px;
+    flex: 1 0 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titleAndDescriptionContainer {
+    font-size: 19px;
+    margin-bottom: 7px;
+    width: 100%;
+    font-family: "robotoblack_italic", sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+}

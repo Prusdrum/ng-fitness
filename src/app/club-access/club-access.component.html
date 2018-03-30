@@ -1,0 +1,16 @@
+<div>
+  <ul class="list">
+    <li *ngFor="let clubAccess of clubAccesses" 
+    class="clubAccessBox" 
+    [class.clubAccessBoxSelected]="clubAccess.isSelected"
+    (click)="onSelect(clubAccess)">
+      <div class="clubAccessBoxContent">
+        <div class="titleAndDescriptionContainer">
+          <h3>{{clubAccess.name}}</h3>
+        </div>
+        <div *ngIf="clubAccess.priceDiff > 0">{{clubAccess.priceDiff}}</div>
+      </div>
+    </li>
+  </ul>
+
+</div>
