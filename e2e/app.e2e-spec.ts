@@ -1,4 +1,5 @@
-import { AppPage } from './app.po';
+import { AppPage } from './app.page';
+import { of } from 'rxjs/observable/of';
 
 describe('ng fitness App', () => {
   let page: AppPage;
@@ -16,8 +17,26 @@ describe('ng fitness App', () => {
 
         return page.getPrice().then(price => {
           return expect(price).toEqual(defaultPrice);
-        })
-      })
-    })
+        });
+      });
+
+      describe('when two club access is selected', () => {
+        beforeEach((done) => {
+          page = new AppPage();
+        
+          page.navigateTo()
+            .then(() => page.selectTwoClubAccess())
+            .then(() => done());
+        });
+
+        it('should reflect this change in total price', () => {
+          const defaultPrice = 349;
+
+          return page.getPrice().then(price => {
+            return expect(price).toEqual(defaultPrice);
+          });
+        });
+      });
+    });
   });
 });
