@@ -11,7 +11,6 @@ import { catchError, map, mergeMap, tap, switchMap } from 'rxjs/operators';
 
 @Injectable()
 export class LoadEffects {
-    // Listen for the 'LOGIN' action
     @Effect() loadData$ = this.actions$.pipe(
         ofType(SetupActionTypes.LOAD_SETUP),
         mergeMap(() => (

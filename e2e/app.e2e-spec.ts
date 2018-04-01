@@ -1,14 +1,23 @@
 import { AppPage } from './app.po';
 
-describe('ngrx-learn App', () => {
+describe('ng fitness App', () => {
   let page: AppPage;
 
-  beforeEach(() => {
+  beforeEach((done) => {
     page = new AppPage();
+
+    page.navigateTo().then(() => done());
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+  describe('give data loaded', () => {
+    describe('when nothing has changed', () => {
+      it('should have total price equals default one', () => {
+        const defaultPrice = 299;
+
+        return page.getPrice().then(price => {
+          return expect(price).toEqual(defaultPrice);
+        })
+      })
+    })
   });
 });
